@@ -9,7 +9,7 @@
 # Usage:
 #     wsl2-lies.fish <COMMAND ...>
 
-set -l SCRIPT_DIR (realpath (dirname (status -f)))
+set -l SCRIPT_DIR (realpath (dirname (realpath (status -f))))
 
 set -l orig_user (whoami)
 set -l orig_group (id -gn)
